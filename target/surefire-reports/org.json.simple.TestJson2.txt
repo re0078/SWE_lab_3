@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: org.json.simple.TestJson
+Test set: org.json.simple.TestJson2
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in org.json.simple.TestJson
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s - in org.json.simple.TestJson2

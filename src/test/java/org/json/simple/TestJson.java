@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
 public class TestJson {
@@ -84,5 +86,24 @@ public class TestJson {
 		String str = JSONValue.toJSONString(obj);
 		System.out.println(str);
 		assertEquals(str, "[1,2,3,4,5]");
+	}
+
+	@Test
+	public void testJSONParsing() throws ParseException {
+		String jsonString = "{\"name\":\"Re\", \"age\":23}";
+		JSONParser parser = new JSONParser();
+		JSONObject jsonObject = (JSONObject) parser.parse(jsonString);
+		String name = (String) jsonObject.get("name");
+		long age = (long) jsonObject.get("age");
+		assertEquals("Re", name);
+		assertEquals(23, age);
+	}
+
+	@Test(expected = ParseException.class)
+	public void testParseException() throws ParseException {
+		String jsonString = "{\"name\":\"Re\", \"age\":23";
+
+		JSONParser parser = new JSONParser();
+		parser.parse(jsonString);
 	}
 }
