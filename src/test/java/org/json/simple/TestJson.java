@@ -5,14 +5,15 @@
 package org.json.simple;
 
 import static org.junit.Assert.assertEquals;
-
-import java.awt.geom.Point2D;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.json.simple.parser.Yytoken;
 import org.junit.Test;
 
 public class TestJson {

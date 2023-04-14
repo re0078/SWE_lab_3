@@ -51,18 +51,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    20%
+    40%
   </span>
   <span class="absValue">
-    (5/25)
+    (10/25)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    11.8%
+    30.4%
   </span>
   <span class="absValue">
-    (19/161)
+    (49/161)
   </span>
 </td>
 </tr>
@@ -234,20 +234,20 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;	}
 &nbsp;	
 &nbsp;	public static void writeJSONString(int[] array, Writer out) throws IOException{
-<b class="nc">&nbsp;		if(array == null){</b>
+<b class="fc">&nbsp;		if(array == null){</b>
 <b class="nc">&nbsp;			out.write(&quot;null&quot;);</b>
-<b class="nc">&nbsp;		} else if(array.length == 0) {</b>
+<b class="fc">&nbsp;		} else if(array.length == 0) {</b>
 <b class="nc">&nbsp;			out.write(&quot;[]&quot;);</b>
 &nbsp;		} else {
-<b class="nc">&nbsp;			out.write(&quot;[&quot;);</b>
-<b class="nc">&nbsp;			out.write(String.valueOf(array[0]));</b>
+<b class="fc">&nbsp;			out.write(&quot;[&quot;);</b>
+<b class="fc">&nbsp;			out.write(String.valueOf(array[0]));</b>
 &nbsp;			
-<b class="nc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
-<b class="nc">&nbsp;				out.write(&quot;,&quot;);</b>
-<b class="nc">&nbsp;				out.write(String.valueOf(array[i]));</b>
+<b class="fc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
+<b class="fc">&nbsp;				out.write(&quot;,&quot;);</b>
+<b class="fc">&nbsp;				out.write(String.valueOf(array[i]));</b>
 &nbsp;			}
 &nbsp;			
-<b class="nc">&nbsp;			out.write(&quot;]&quot;);</b>
+<b class="fc">&nbsp;			out.write(&quot;]&quot;);</b>
 &nbsp;		}
 &nbsp;	}
 &nbsp;	
@@ -354,29 +354,29 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;	}
 &nbsp;	
 &nbsp;	public static void writeJSONString(boolean[] array, Writer out) throws IOException{
-<b class="nc">&nbsp;		if(array == null){</b>
+<b class="fc">&nbsp;		if(array == null){</b>
 <b class="nc">&nbsp;			out.write(&quot;null&quot;);</b>
-<b class="nc">&nbsp;		} else if(array.length == 0) {</b>
+<b class="fc">&nbsp;		} else if(array.length == 0) {</b>
 <b class="nc">&nbsp;			out.write(&quot;[]&quot;);</b>
 &nbsp;		} else {
-<b class="nc">&nbsp;			out.write(&quot;[&quot;);</b>
-<b class="nc">&nbsp;			out.write(String.valueOf(array[0]));</b>
+<b class="fc">&nbsp;			out.write(&quot;[&quot;);</b>
+<b class="fc">&nbsp;			out.write(String.valueOf(array[0]));</b>
 &nbsp;			
-<b class="nc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
-<b class="nc">&nbsp;				out.write(&quot;,&quot;);</b>
-<b class="nc">&nbsp;				out.write(String.valueOf(array[i]));</b>
+<b class="fc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
+<b class="fc">&nbsp;				out.write(&quot;,&quot;);</b>
+<b class="fc">&nbsp;				out.write(String.valueOf(array[i]));</b>
 &nbsp;			}
 &nbsp;			
-<b class="nc">&nbsp;			out.write(&quot;]&quot;);</b>
+<b class="fc">&nbsp;			out.write(&quot;]&quot;);</b>
 &nbsp;		}
 &nbsp;	}
 &nbsp;	
 &nbsp;	public static String toJSONString(boolean[] array){
-<b class="nc">&nbsp;		final StringWriter writer = new StringWriter();</b>
+<b class="fc">&nbsp;		final StringWriter writer = new StringWriter();</b>
 &nbsp;		
 &nbsp;		try {
-<b class="nc">&nbsp;			writeJSONString(array, writer);</b>
-<b class="nc">&nbsp;			return writer.toString();</b>
+<b class="fc">&nbsp;			writeJSONString(array, writer);</b>
+<b class="fc">&nbsp;			return writer.toString();</b>
 <b class="nc">&nbsp;		} catch(IOException e){</b>
 &nbsp;			// This should never happen for a StringWriter
 <b class="nc">&nbsp;			throw new RuntimeException(e);</b>
@@ -414,29 +414,29 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;	}
 &nbsp;	
 &nbsp;	public static void writeJSONString(Object[] array, Writer out) throws IOException{
-<b class="nc">&nbsp;		if(array == null){</b>
+<b class="fc">&nbsp;		if(array == null){</b>
 <b class="nc">&nbsp;			out.write(&quot;null&quot;);</b>
-<b class="nc">&nbsp;		} else if(array.length == 0) {</b>
+<b class="fc">&nbsp;		} else if(array.length == 0) {</b>
 <b class="nc">&nbsp;			out.write(&quot;[]&quot;);</b>
 &nbsp;		} else {
-<b class="nc">&nbsp;			out.write(&quot;[&quot;);</b>
-<b class="nc">&nbsp;			JSONValue.writeJSONString(array[0], out);</b>
+<b class="fc">&nbsp;			out.write(&quot;[&quot;);</b>
+<b class="fc">&nbsp;			JSONValue.writeJSONString(array[0], out);</b>
 &nbsp;			
-<b class="nc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
-<b class="nc">&nbsp;				out.write(&quot;,&quot;);</b>
-<b class="nc">&nbsp;				JSONValue.writeJSONString(array[i], out);</b>
+<b class="fc">&nbsp;			for(int i = 1; i &lt; array.length; i++){</b>
+<b class="fc">&nbsp;				out.write(&quot;,&quot;);</b>
+<b class="fc">&nbsp;				JSONValue.writeJSONString(array[i], out);</b>
 &nbsp;			}
 &nbsp;			
-<b class="nc">&nbsp;			out.write(&quot;]&quot;);</b>
+<b class="fc">&nbsp;			out.write(&quot;]&quot;);</b>
 &nbsp;		}
 &nbsp;	}
 &nbsp;	
 &nbsp;	public static String toJSONString(Object[] array){
-<b class="nc">&nbsp;		final StringWriter writer = new StringWriter();</b>
+<b class="fc">&nbsp;		final StringWriter writer = new StringWriter();</b>
 &nbsp;		
 &nbsp;		try {
-<b class="nc">&nbsp;			writeJSONString(array, writer);</b>
-<b class="nc">&nbsp;			return writer.toString();</b>
+<b class="fc">&nbsp;			writeJSONString(array, writer);</b>
+<b class="fc">&nbsp;			return writer.toString();</b>
 <b class="nc">&nbsp;		} catch(IOException e){</b>
 &nbsp;			// This should never happen for a StringWriter
 <b class="nc">&nbsp;			throw new RuntimeException(e);</b>
@@ -478,7 +478,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2023-04-14 13:15</div>
+    <div style="float:right;">generated on 2023-04-14 20:54</div>
 </div>
 </body>
 </html>
